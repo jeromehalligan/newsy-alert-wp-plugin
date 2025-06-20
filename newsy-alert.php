@@ -32,6 +32,11 @@ function newsy_alert() {
   $textvar = get_option('newsy_alert_custom_text', ''); 
   $post_id = get_option('newsy_alert_post_id', '');
 
+  // CONDITIONAL LOGIC TO CHECK IF USER READING SELECTED POST; IF SO, NO ALERT 
+  if ( ! empty( $post_id ) && is_single( $post_id ) ) {
+    return; // If it's the specified post, don't display the alert.
+  }
+
   $alert_display_text = '';
   $alert_link = home_url();
 
