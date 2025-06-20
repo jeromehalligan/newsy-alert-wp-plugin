@@ -51,8 +51,8 @@ function newsy_alert() {
 
 if (!empty($alert_display_text)) {
   ?>
-	<div class="alert" style=" width: 100%;height: auto;background: rgba(216,7,14,1.0);font-weight: bold;color: white;padding: 1em;font-family: 'Merriweather', Georgia;font-style: italic;line-height: 1.2em;">
-		<a style="color:white" href="<?php echo esc_url($alert_link); ?>"><?php echo esc_html($alert_display_text); ?> >></a>
+	<div class="alert" style=" width: 100%;height: auto;background: rgba(216,7,14,1.0);font-weight: bold;color: white;padding: 1em;font-family: Georgia;font-style: italic;line-height: 1.2em;">
+		<a style="color:white" href="<?php echo esc_url($alert_link); ?>">Breaking: <?php echo esc_html($alert_display_text); ?> >></a>
 	</div>
 <?php }
 }
