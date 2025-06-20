@@ -29,7 +29,7 @@ along with Newsy Alert. If not, see (https://www.gnu.org/licenses/old-licenses/g
 add_action( 'wp_head', 'newsy_alert' );
 
 function newsy_alert() { 
-  $textvar = get_option('test_plugin_variable', ''); 
+  $textvar = get_option('newsy_alert_custom_text', ''); 
   $post_id = get_option('newsy_alert_post_id', '');
 
   $alert_display_text = '';
@@ -67,12 +67,12 @@ function my_admin_menu () {
 
 function newsy_alert_admin_page () {
 
-  $textvar = get_option('test_plugin_variable', 'hello world');
+  $textvar = get_option('newsy_alert_custom_text', 'hello world');
   $post_id_var = get_option('newsy_alert_post_id', '');
 
   if (isset($_POST['change-clicked'])) {
-    update_option( 'test_plugin_variable', sanitize_text_field($_POST['custom_alert_text']) );
-    $textvar = get_option('test_plugin_variable', 'Click here for a breaking news update!');
+    update_option( 'newsy_alert_custom_text', sanitize_text_field($_POST['custom_alert_text']) );
+    $textvar = get_option('newsy_alert_custom_text', 'Click here for a breaking news update!');
 
     $new_post_id = isset($_POST['alert_post_id']) ? intval($_POST['alert_post_id']) : '';
     update_option( 'newsy_alert_post_id', $new_post_id );
