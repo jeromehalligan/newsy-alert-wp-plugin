@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Newsy Alert
-Plugin URI: http://itsthebulletin.com
+Plugin URI: https://github.com/jeromehalligan/newsy-alert-wp-plugin
 Description: This is a plugin to display a breaking news alert under the theme's header
 Version: 1.0
 Author: Jerome Halligan
-Author URI: https://itsthebulletin.com
+Author URI: https://github.com/jeromehalligan
 License: GPLv2
 */
 
